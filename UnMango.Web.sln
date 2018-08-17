@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27924.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnMango.Web", "UnMango.Web\UnMango.Web.csproj", "{0337B7A3-054D-4C42-A585-1599BAA74A1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnMango.Web.UI", "UnMango.Web.UI\UnMango.Web.UI.csproj", "{144B7CA8-39AE-477A-95DC-ABB575D83229}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0337B7A3-054D-4C42-A585-1599BAA74A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0337B7A3-054D-4C42-A585-1599BAA74A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0337B7A3-054D-4C42-A585-1599BAA74A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{144B7CA8-39AE-477A-95DC-ABB575D83229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144B7CA8-39AE-477A-95DC-ABB575D83229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144B7CA8-39AE-477A-95DC-ABB575D83229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144B7CA8-39AE-477A-95DC-ABB575D83229}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
