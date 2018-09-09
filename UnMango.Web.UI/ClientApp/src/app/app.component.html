@@ -9,19 +9,19 @@
     <mat-nav-list>
       <a mat-list-item
          [routerLink]='["/"]'
-         (click)='collapse()'>
+         (click)='drawer.collapse()'>
         <mat-icon color="primary">home</mat-icon>
         <span>Home</span>
       </a>
       <a mat-list-item
          [routerLink]='["/counter"]'
-         (click)='collapse()'>
+         (click)='drawer.collapse()'>
         <mat-icon color="primary">exposure_plus_1</mat-icon>
         <span>Counter</span>
       </a>
       <a mat-list-item
          [routerLink]='["/fetch-data"]'
-         (click)='collapse()'>
+         (click)='drawer.collapse()'>
         <mat-icon color="primary">list</mat-icon>
         <span>Fetch data</span>
       </a>
