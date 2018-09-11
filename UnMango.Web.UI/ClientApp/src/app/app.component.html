@@ -1,45 +1,37 @@
+<mat-toolbar color="primary"
+             class="app-header">
+  <button type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span>UnMango Web Shit</span>
+</mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer
                class="sidenav"
-               fixedInViewport="true"
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(isHandset$ | async)">
-    <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item
-         [routerLink]='["/"]'
-         (click)='drawer.collapse()'>
-        <mat-icon color="primary">home</mat-icon>
-        <span>Home</span>
+         [routerLinkActive]="['link-active']"
+         [routerLink]="'/'">
+        <span matLine>Home</span>
+        <mat-icon matListIcon>home</mat-icon>
       </a>
+      <h3 matSubheader>Gaming</h3>
       <a mat-list-item
-         [routerLink]='["/counter"]'
-         (click)='drawer.collapse()'>
-        <mat-icon color="primary">exposure_plus_1</mat-icon>
-        <span>Counter</span>
-      </a>
-      <a mat-list-item
-         [routerLink]='["/fetch-data"]'
-         (click)='drawer.collapse()'>
-        <mat-icon color="primary">list</mat-icon>
-        <span>Fetch data</span>
+         [routerLinkActive]="['link-active']"
+         [routerLink]="'/minecraft'">
+        <span matLine>Minecraft</span>
+        <mat-icon matListIcon>games</mat-icon>
       </a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button type="button"
-              aria-label="Toggle sidenav"
-              mat-icon-button
-              (click)="drawer.toggle()"
-              *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>UnMango.Web.UI</span>
-    </mat-toolbar>
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
+  <mat-sidenav-content class="body-content">
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

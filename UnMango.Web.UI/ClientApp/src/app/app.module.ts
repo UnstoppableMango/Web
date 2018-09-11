@@ -1,22 +1,25 @@
+import { NgModule } from '@angular/core';
+import { LayoutModule } from '@angular/cdk/layout';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+
+import { MaterialModule } from './material';
+import { RoutingModule } from './routing';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { MaterialModule } from './material.module';
-import { RoutingModule } from './routing.module';
+import { HomeComponent } from './home';
+import { MinecraftComponent } from './minecraft';
+import { DashboardComponent } from './dashboard';
+import { SharedModule } from './shared';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent
+    MinecraftComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -24,7 +27,9 @@ import { RoutingModule } from './routing.module';
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    RoutingModule
+    RoutingModule,
+    LayoutModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
