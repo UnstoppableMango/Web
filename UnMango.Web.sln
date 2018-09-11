@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27924.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnMango.Web", "UnMango.Web\UnMango.Web.csproj", "{0337B7A3-054D-4C42-A585-1599BAA74A1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnMango.Web.UI", "UnMango.Web.UI\UnMango.Web.UI.csproj", "{144B7CA8-39AE-477A-95DC-ABB575D83229}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnMango.Web.UI", "UnMango.Web.UI\UnMango.Web.UI.csproj", "{144B7CA8-39AE-477A-95DC-ABB575D83229}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9A7D85B6-7030-46E1-8B5D-369A7A4A2CB5}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		NuGet.Config = NuGet.Config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0337B7A3-054D-4C42-A585-1599BAA74A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0337B7A3-054D-4C42-A585-1599BAA74A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0337B7A3-054D-4C42-A585-1599BAA74A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0337B7A3-054D-4C42-A585-1599BAA74A1D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{144B7CA8-39AE-477A-95DC-ABB575D83229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{144B7CA8-39AE-477A-95DC-ABB575D83229}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{144B7CA8-39AE-477A-95DC-ABB575D83229}.Release|Any CPU.ActiveCfg = Release|Any CPU
