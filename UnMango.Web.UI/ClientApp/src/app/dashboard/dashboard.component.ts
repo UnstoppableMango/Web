@@ -9,7 +9,12 @@ import { map } from 'rxjs/operators';
 })
 export class DashboardComponent implements OnInit {
 
-  summaries: any[];
+  summaries = [
+    { title: 'Card 1', cols: 2, rows: 1 },
+    { title: 'Card 2', cols: 1, rows: 1 },
+    { title: 'Card 3', cols: 1, rows: 2 },
+    { title: 'Card 4', cols: 1, rows: 1 }
+  ];
 
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -26,14 +31,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver
-  ) {
-    this.summaries = [
-      { title: 'Card 1', cols: 2, rows: 1 },
-      { title: 'Card 2', cols: 1, rows: 1 },
-      { title: 'Card 3', cols: 1, rows: 2 },
-      { title: 'Card 4', cols: 1, rows: 1 }
-    ];
-  }
+  ) { }
 
   ngOnInit(): void { }
 }
