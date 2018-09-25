@@ -8,6 +8,12 @@
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <span>UnMango Web Shit</span>
+  <button type="button"
+          mat-button
+          [routerLink]="'/login'"
+          (click)="drawer.close()">
+    Login
+  </button>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer

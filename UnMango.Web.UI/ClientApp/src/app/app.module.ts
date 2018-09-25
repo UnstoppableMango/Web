@@ -13,13 +13,15 @@ import { HomeComponent } from './home';
 import { MinecraftComponent } from './minecraft';
 import { DashboardComponent } from './dashboard';
 import { SharedModule } from './shared';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MinecraftComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
