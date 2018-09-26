@@ -9,6 +9,14 @@
     @include mat-elevation(6);
 }
 
+.title {
+  flex: 1 0 auto;
+}
+
+.login-button {
+  flex: 0 0 auto;
+}
+
 .sidenav-container {
     position: fixed;
     top: 64px;

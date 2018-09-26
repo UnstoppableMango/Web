@@ -3,7 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,20 +12,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  @ViewChild(MatSidenav)
-  drawer: MatSidenav;
-
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(map(result => result.matches));
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private router: Router
+    private route: ActivatedRoute
   ) { }
-
-  login(): void {
-    this.drawer.close();
-  }
 
 }

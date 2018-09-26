@@ -7,13 +7,14 @@ import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from './material';
 import { RoutingModule } from './routing';
+import { SharedModule } from './shared';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
 import { MinecraftComponent } from './minecraft';
 import { DashboardComponent } from './dashboard';
-import { SharedModule } from './shared';
 import { LoginComponent } from './login/login.component';
+import { LoginButtonComponent } from './login-button/login-button.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     MinecraftComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    LoginButtonComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
