@@ -13,8 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
 import { MinecraftComponent } from './minecraft';
 import { DashboardComponent } from './dashboard';
-import { LoginComponent } from './login/login.component';
-import { LoginButtonComponent } from './login-button/login-button.component';
+import { LoginButtonComponent, LoginDialogComponent } from './login-button';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,8 @@ import { LoginButtonComponent } from './login-button/login-button.component';
     HomeComponent,
     MinecraftComponent,
     DashboardComponent,
-    LoginComponent,
-    LoginButtonComponent
+    LoginButtonComponent,
+    LoginDialogComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -35,6 +34,7 @@ import { LoginButtonComponent } from './login-button/login-button.component';
     LayoutModule,
     SharedModule
   ],
+  entryComponents: [LoginDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

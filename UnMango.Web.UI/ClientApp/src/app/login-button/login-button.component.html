@@ -1,5 +1,5 @@
 <button type="button"
         mat-button
-        [routerLink]="'/login'">
-  {{text}}
+        (click)="onClick()">
+  {{text$ | async}}
 </button>
