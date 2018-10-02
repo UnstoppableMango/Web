@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { BehaviorSubject, Subject } from 'rxjs';
-import { takeUntil, tap } from 'rxjs/operators';
+import { takeUntil, tap, filter } from 'rxjs/operators';
 
 import { AuthService } from '../shared/auth';
 import { LoginDialogComponent } from './login-dialog';
@@ -31,15 +31,15 @@ export class LoginButtonComponent implements OnInit, OnDestroy {
   }
 
   onClick(): void {
-    this.dialog.open(LoginDialogComponent)
-      .beforeClose().pipe(
-        takeUntil(this.ngUnsubscribe),
-        tap(result => {
-          if (result) {
-            this.onSuccess();
-          }
-        })
-      );
+    const ref = this.dialog.open(LoginDialogComponent, {
+      width: '30%'
+    });
+
+    ref.beforeClose().pipe(
+      takeUntil(this.ngUnsubscribe),
+      filter(result => result),
+      tap(() => this.onSuccess())
+    );
   }
 
   onSuccess(): void {
