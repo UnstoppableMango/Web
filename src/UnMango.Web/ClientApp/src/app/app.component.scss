@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+
+.sidenav-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidenav {
+  width: 200px;
+  @include mat-elevation-transition;
+
+  &:hover {
+    @include mat-elevation(15);
+  }
+}
+
+@media (max-width: 767px) {
+  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+  .body-content {
+    padding-top: 50px;
+  }
+}
