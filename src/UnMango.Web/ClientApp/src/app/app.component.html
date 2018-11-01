@@ -1,9 +1,11 @@
-<app-titlebar></app-titlebar>
+<app-titlebar [height]="headerHeight"></app-titlebar>
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer
                mode="side"
-               [opened]="true"
+               [opened]="authenticated$ | async"
                role="navigation"
+               fixedInViewport
+               [fixedTopGap]="headerHeight"
                class="sidenav">
     <app-nav-menu></app-nav-menu>
   </mat-sidenav>
