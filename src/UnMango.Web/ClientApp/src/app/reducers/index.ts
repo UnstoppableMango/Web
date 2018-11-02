@@ -5,14 +5,17 @@ import {
   createSelector,
   MetaReducer
 } from '@ngrx/store';
+
 import { environment } from '../../environments/environment';
 
-export interface State {
+import * as fromLayout from './layout.reducer';
 
+export interface State {
+  layout: fromLayout.State;
 }
 
 export const reducers: ActionReducerMap<State> = {
-
+  layout: fromLayout.reducer
 };
 
 

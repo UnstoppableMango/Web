@@ -8,17 +8,23 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 
 import { environment } from '../environments/environment';
-import { AppComponent } from './app.component';
 import { reducers, metaReducers } from './reducers';
-import { AppEffects } from './app.effects';
 import { MaterialModule } from './shared';
 import { RoutingModule } from './routing';
+import { AppComponent } from './app.component';
+import { AppEffects } from './app.effects';
+import { CounterComponent, HomeComponent, FetchDataComponent } from './containers';
 
 import * as app from './components';
-import * as features from './features';
 
 @NgModule({
-  declarations: [AppComponent, ...app.components],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    CounterComponent,
+    FetchDataComponent,
+    ...app.components
+  ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
@@ -26,10 +32,9 @@ import * as features from './features';
     BrowserAnimationsModule,
     MaterialModule,
     RoutingModule,
-    StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([AppEffects]),
-    ...features.modules
+    StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([AppEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
