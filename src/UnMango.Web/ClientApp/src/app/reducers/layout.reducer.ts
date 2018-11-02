@@ -1,11 +1,8 @@
-import { Action } from '@ngrx/store';
-
 import {
   LayoutActions,
   OPEN_SIDENAV,
   CLOSE_SIDENAV
-} from 'src/app/actions/layout.actions';
-
+} from '../actions/layout.actions';
 
 export interface State {
   showSidenav: boolean;
