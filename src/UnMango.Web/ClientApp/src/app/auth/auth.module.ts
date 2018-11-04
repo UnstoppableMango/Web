@@ -1,15 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './containers/login/login.component';
+import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { LoginEffects } from './effects/login.effects';
-import { LogoutEffects } from './effects/logout.effects';
+
+import { MaterialModule } from 'src/app/shared';
+import { AuthRoutingModule } from './auth-routing.module';
+import { LogoutConfirmationDialogComponent } from './components';
+import { LoginComponent } from './containers';
+import { AuthEffects, LoginEffects, LogoutEffects } from './effects';
+import { reducers } from '../reducers';
 
 @NgModule({
   imports: [
     CommonModule,
-    EffectsModule.forFeature([LoginEffects, LogoutEffects])
+    MaterialModule,
+    AuthRoutingModule,
+    StoreModule.forFeature('auth', reducers),
+    EffectsModule.forFeature([AuthEffects, LoginEffects, LogoutEffects])
   ],
-  declarations: [LoginComponent]
+  declarations: [LoginComponent, LogoutConfirmationDialogComponent],
+  entryComponents: [LogoutConfirmationDialogComponent]
 })
 export class AuthModule { }

@@ -5,6 +5,7 @@ import { exhaustMap, map } from 'rxjs/operators';
 
 import { Logout } from '../actions/auth.actions';
 import { LOGOUT_CONFIRMATION, LogoutConfirmationDismiss } from '../actions/logout.actions';
+import { LogoutConfirmationDialogComponent } from '../components';
 
 @Injectable()
 export class LogoutEffects {

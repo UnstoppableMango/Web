@@ -1,1 +1,3 @@
-export * from './layout.actions';
+import { LayoutActions } from './layout.actions';
+
+export { LayoutActions };

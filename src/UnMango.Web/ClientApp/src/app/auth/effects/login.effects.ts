@@ -3,9 +3,7 @@ import { Router } from '@angular/router';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { tap } from 'rxjs/operators';
 
-import { LOGIN_SUCCESS } from '../actions/login.actions';
-import { LOGOUT, LOGIN_REDIRECT } from '../actions/auth.actions';
-
+import { LOGOUT, LOGIN_REDIRECT, LOGIN_SUCCESS } from '../actions/auth.actions';
 
 @Injectable()
 export class LoginEffects {
