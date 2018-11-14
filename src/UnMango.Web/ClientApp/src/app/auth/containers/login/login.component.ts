@@ -1,19 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { Component } from '@angular/core';
+import { Store, select } from '@ngrx/store';
 
-import { CloseSidenav } from 'src/app/actions';
+import { Login } from '@app/auth/actions';
+import { Credentials } from '@app/auth/models';
+
+import * as fromAuth from '@app/auth/reducers';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  constructor(private store: Store<any>) { }
+  pending$ = this.store.pipe(select(fromAuth.getLoginPending));
+  error$ = this.store.pipe(select(fromAuth.getLoginError));
 
-  ngOnInit() {
-    this.store.dispatch(new CloseSidenav());
+  constructor(private store: Store<fromAuth.State>) { }
+
+  onSubmit(credentials: Credentials) {
+    this.store.dispatch(new Login({ credentials }));
   }
 
 }

@@ -1,45 +1,14 @@
 <mat-nav-list>
-  <a mat-list-item
-     [routerLink]="['/']"
-     [routerLinkActive]="['link-active']"
-     [routerLinkActiveOptions]="{ exact: true }">
-    <span matLine>Home</span>
-    <mat-icon matListIcon>home</mat-icon>
-  </a>
-  <a mat-list-item
-     [routerLink]="['/counter']"
-     [routerLinkActive]="['link-active']">
-    <span matLine>Counter</span>
-    <mat-icon matListIcon>dashboard</mat-icon>
-  </a>
-  <a mat-list-item
-     [routerLink]="['/fetch-data']"
-     [routerLinkActive]="['link-active']">
-    <span matLine>Fetch Data</span>
-    <mat-icon matListIcon>event</mat-icon>
-  </a>
+  <app-nav-item routerLink="/"
+                icon="home">
+    Home
+  </app-nav-item>
+  <app-nav-item routerLink="/counter"
+                icon="dashboard">
+    Counter
+  </app-nav-item>
+  <app-nav-item routerLink="/fetch-data"
+                icon="event">
+    Fetch Data
+  </app-nav-item>
 </mat-nav-list>
-<!-- <div class='navbar-collapse collapse'
-       [ngClass]='{ "in": isExpanded }'>
-    <ul class='nav navbar-nav'>
-      <li [routerLinkActive]='["link-active"]'
-          [routerLinkActiveOptions]='{ exact: true }'>
-        <a [routerLink]='["/"]'
-           (click)='collapse()'>
-          <span class='glyphicon glyphicon-home'></span> Home
-        </a>
-      </li>
-      <li [routerLinkActive]='["link-active"]'>
-        <a [routerLink]='["/counter"]'
-           (click)='collapse()'>
-          <span class='glyphicon glyphicon-education'></span> Counter
-        </a>
-      </li>
-      <li [routerLinkActive]='["link-active"]'>
-        <a [routerLink]='["/fetch-data"]'
-           (click)='collapse()'>
-          <span class='glyphicon glyphicon-th-list'></span> Fetch data
-        </a>
-      </li>
-    </ul>
-  </div> -->

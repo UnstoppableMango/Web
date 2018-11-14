@@ -3,8 +3,7 @@ import { MatDialog } from '@angular/material';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { exhaustMap, map } from 'rxjs/operators';
 
-import { Logout } from '../actions/auth.actions';
-import { LOGOUT_CONFIRMATION, LogoutConfirmationDismiss } from '../actions/logout.actions';
+import { Logout, LogoutConfirmationDismiss, LOGOUT_CONFIRMATION } from '../actions';
 import { LogoutConfirmationDialogComponent } from '../components';
 
 @Injectable()

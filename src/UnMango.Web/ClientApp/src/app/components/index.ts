@@ -1,10 +1,13 @@
+import { NavItemComponent } from './nav-item/nav-item.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { TitlebarComponent } from './titlebar/titlebar.component';
 
 export const components = [
+  NavItemComponent,
   NavMenuComponent,
   TitlebarComponent
 ];
 
-export { NavMenuComponent } from './nav-menu/nav-menu.component';
-export { TitlebarComponent } from './titlebar/titlebar.component';
+export * from './nav-item/nav-item.component';
+export * from './nav-menu/nav-menu.component';
+export * from './titlebar/titlebar.component';

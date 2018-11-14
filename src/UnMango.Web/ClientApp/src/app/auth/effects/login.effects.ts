@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { tap } from 'rxjs/operators';
 
-import { LOGOUT, LOGIN_REDIRECT, LOGIN_SUCCESS } from '../actions/auth.actions';
+import { LOGOUT, LOGIN_REDIRECT, LOGIN_SUCCESS } from '../actions';
 
 @Injectable()
 export class LoginEffects {
@@ -17,7 +17,7 @@ export class LoginEffects {
   @Effect({ dispatch: false })
   loginRedirect$ = this.actions$.pipe(
     ofType(LOGIN_REDIRECT, LOGOUT),
-    tap(authed => this.router.navigate(['/login']))
+    tap(action => this.router.navigate(['/login']))
   );
 
   constructor(

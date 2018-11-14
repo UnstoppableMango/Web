@@ -1,4 +1,4 @@
-import { LoginActions } from '../actions';
+import { AuthActions, LOGIN_FAILURE, LOGIN_SUCCESS, LOGIN } from '../actions';
 
 export interface State {
   error: string | null;
@@ -10,8 +10,27 @@ export const initialState: State = {
   pending: false
 };
 
-export function reducer(state = initialState, action: LoginActions): State {
+export function reducer(state = initialState, action: AuthActions): State {
   switch (action.type) {
+    case LOGIN:
+      return {
+        ...state,
+        pending: true
+      };
+
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        error: null,
+        pending: false
+      };
+
+    case LOGIN_FAILURE:
+      return {
+        ...state,
+        error: action.payload.error,
+        pending: false
+      };
   }
 
   return state;

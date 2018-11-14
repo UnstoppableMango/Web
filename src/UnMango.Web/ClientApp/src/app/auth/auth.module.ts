@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
-import { MaterialModule } from 'src/app/shared';
+import { MaterialModule } from '@app/shared';
 import { AuthRoutingModule } from './auth-routing.module';
-import { LogoutConfirmationDialogComponent } from './components';
-import { LoginComponent } from './containers';
+
 import { AuthEffects, LoginEffects, LogoutEffects } from './effects';
 import { reducers } from '../reducers';
+
+import { components, LogoutConfirmationDialogComponent } from './components';
+import { containers } from './containers';
 
 @NgModule({
   imports: [
@@ -18,7 +20,7 @@ import { reducers } from '../reducers';
     StoreModule.forFeature('auth', reducers),
     EffectsModule.forFeature([AuthEffects, LoginEffects, LogoutEffects])
   ],
-  declarations: [LoginComponent, LogoutConfirmationDialogComponent],
+  declarations: [...components, ...containers],
   entryComponents: [LogoutConfirmationDialogComponent]
 })
 export class AuthModule { }
