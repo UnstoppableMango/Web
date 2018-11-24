@@ -14,17 +14,15 @@ import { MaterialModule } from './shared';
 import { RoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppEffects } from './app.effects';
-import { CounterComponent, HomeComponent, FetchDataComponent } from './containers';
 
-import * as app from './components';
+import { components } from './components';
+import { containers } from './containers';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
-    ...app.components
+    ...components,
+    ...containers
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
