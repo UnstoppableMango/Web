@@ -11,7 +11,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { environment } from '../environments/environment';
 import { reducers, metaReducers } from './reducers';
 import { MaterialModule } from './shared';
-import { RoutingModule } from './routing';
+import { RoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppEffects } from './app.effects';
 import { CounterComponent, HomeComponent, FetchDataComponent } from './containers';
