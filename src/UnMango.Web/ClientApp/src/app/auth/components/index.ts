@@ -6,5 +6,9 @@ export const components: any[] = [
   LogoutConfirmationDialogComponent
 ];
 
+export const entryComponents: any[] = [
+  LogoutConfirmationDialogComponent
+];
+
 export * from './login-form/login-form.component';
 export * from './logout-confirmation-dialog/logout-confirmation-dialog.component';

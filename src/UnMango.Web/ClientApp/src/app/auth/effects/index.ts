@@ -1,3 +1,9 @@
-export * from './auth.effects';
-export * from './login.effects';
-export * from './logout.effects';
+import { AuthEffects } from './auth.effects';
+import { LoginEffects } from './login.effects';
+import { LogoutEffects } from './logout.effects';
+
+export const effects: any[] = [
+  AuthEffects,
+  LoginEffects,
+  LogoutEffects
+];
