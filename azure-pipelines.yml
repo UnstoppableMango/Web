@@ -1,0 +1,13 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - 'master'
+      - 'release/*'
+
+pr:
+  batch: true
+  branches:
+    include:
+      - 'master'
+      - 'release/*'
