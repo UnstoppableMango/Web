@@ -35,7 +35,7 @@ import { containers } from './containers';
       name: 'The UnMango App',
       logOnly: environment.production,
     }),
-    StoreModule.forRoot(reducers, { metaReducers }),
+    StoreModule.forRoot(reducers, { metaReducers, runtimeChecks: { strictStateImmutability: true, strictActionImmutability: true } }),
     EffectsModule.forRoot([AppEffects]),
     StoreRouterConnectingModule.forRoot()
   ],

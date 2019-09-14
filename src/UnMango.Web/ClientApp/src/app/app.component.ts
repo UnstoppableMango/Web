@@ -1,5 +1,5 @@
 import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
-import { MatSidenavContainer } from '@angular/material';
+import { MatSidenavContainer } from '@angular/material/sidenav';
 import { Observable, of } from 'rxjs';
 
 @Component({

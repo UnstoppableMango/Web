@@ -7,7 +7,7 @@ import {
   Action
 } from '@ngrx/store';
 import * as fromRouter from '@ngrx/router-store';
-import { storeFreeze } from 'ngrx-store-freeze';
+
 
 import { environment } from '../../environments/environment';
 
@@ -37,7 +37,7 @@ export function logger(reducer: ActionReducer<State>): ActionReducer<State> {
 }
 
 export const metaReducers: MetaReducer<State>[] = !environment.production
-  ? [logger, storeFreeze]
+  ? [logger]
   : [];
 
 export const getLayoutState = createFeatureSelector<State, fromLayout.State>('layout');
